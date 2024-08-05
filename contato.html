@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html>
-<title>Contato</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
 <body>
 
-  <h2>Contato</h2>
+    <h2>Contato</h2>
 
-<form class="yas-container">
-  <p>
-  <label for="nome">Nome:</label> <br>
-  <input class="yas-input" type="text" id="nome" onkeyup='validaNome()'></p>
-  <p>
-  <label for="email">E-mail:</label> <br>
-  <input class="yas-input" type="text" id="email"></p>
-  <p>
-  <label for="assunto">Assunto:</label> <br>
-  <input class="yas-input" type="text" id="assunto"></p>
-  <textarea id="assuntoreview" name="assuntoreview" rows="4" cols="50"></textarea> <br>
-  <button>Enviar</button>
+    <form class="yas-container">
+        <p>
+            <label for="nome">Nome:</label> <br>
+            <input class="yas-input" type="text" id="nome" onkeyup='validaNome()'>
+        </p>
+        <p id="txtNome"></p>
+        <p>
+            <label for="email">E-mail:</label> <br>
+            <input class="yas-input" type="text" id="email" onkeyup='validaEmail()'>
+        </p>
+        <p id="txtEmail"></p>
+        <p>
+            <label for="assunto">Assunto:</label> <br>
+            <textarea id="assunto" name="assunto" rows="5" cols="60" onkeyup='validaAssunto()'></textarea>
+        </p>
+        <p id="txtAssunto"></p>
+        <button onclick="enviar()">Enviar</button>
+    </form>
 
-</form>
-
-<script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
-</html> 
+
+</html>
